@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Web Page with Form</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Our Enhanced Web Page</h1>
+        <p>Showcasing HTML5 Features: Lists, Tables, Media, and a Robust Form</p>
+    </header>
+
+    <main>
+        <section id="lists">
+            <h2>Our Favorite Things (Lists)</h2>
+            <h3>Unordered List (Foods)</h3>
+            <ul>
+                <li>Pizza</li>
+                <li>Sushi</li>
+                <li>Tacos</li>
+                <li>Ice Cream</li>
+            </ul>
+            <h3>Ordered List (Top 3 Programming Languages)</h3>
+            <ol>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+            </ol>
+        </section>
+
+        <section id="tables">
+            <h2>Project Progress (Table)</h2>
+            <table>
+                <caption>Weekly Project Milestones</caption>
+                <thead>
+                    <tr>
+                        <th>Week</th>
+                        <th>Task</th>
+                        <th>Status</th>
+                        <th>Progress (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Planning & Design</td>
+                        <td>Completed</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Initial Development</td>
+                        <td>In Progress</td>
+                        <td>75</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Testing Phase</td>
+                        <td>Pending</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Data updated as of July 2025</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section id="media">
+            <h2>Gallery & Sound (Media)</h2>
+            <h3>An Example Image</h3>
+            <figure>
+                <img src="https://via.placeholder.com/600x400?text=Placeholder+Image" alt="A placeholder image demonstrating media embedding" title="Scenic View">
+                <figcaption>A beautiful scenic view (placeholder).</figcaption>
+            </figure>
+
+            <h3>An Example Audio Clip</h3>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                <p>Your browser does not support the audio element. You can <a href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">download the audio here</a>.</p>
+            </audio>
+            <p>Listen to a sample melody.</p>
+        </section>
+
+        <section id="contact-form">
+            <h2>Contact Us (HTML5 Form)</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="form-group">
+                        <label for="fullName">Full Name:</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="John Doe" required autocomplete="name" minlength="3" maxlength="50">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com" required autocomplete="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="e.g., +1-555-123-4567" pattern="^\+?[0-9\s\-\(\)]{7,20}$" title="Phone number must be 7-20 digits long and can include +, -, spaces, or parentheses." autocomplete="tel">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required min="1900-01-01" max="2025-12-31">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Account Details</legend>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" placeholder="Choose a unique username" required minlength="5" maxlength="20" pattern="[a-zA-Z0-9]+" title="Username must be alphanumeric (no spaces or special characters)." autocomplete="username">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Min. 8 characters, incl. upper, lower, number" required minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" title="Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, and one number.">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="website">Website URL:</label>
+                        <input type="url" id="website" name="website" placeholder="https://www.example.com" autocomplete="url">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="favNumber">Favorite Number (1-100):</label>
+                        <input type="number" id="favNumber" name="favNumber" min="1" max="100" step="1" value="50">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="satisfaction">Satisfaction Level (1-10):</label>
+                        <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" value="5" oninput="document.getElementById('satisfactionValue').innerText = this.value;">
+                        <span id="satisfactionValue">5</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="favColor">Favorite Color:</label>
+                        <input type="color" id="favColor" name="favColor" value="#007bff">
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Your Message</legend>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" placeholder="Brief subject for your message" required maxlength="100">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Type your message here..." required minlength="10" maxlength="500"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="howHeard">How did you hear about us?</label>
+                        <select id="howHeard" name="howHeard" required>
+                            <option value="">--Please choose an option--</option>
+                            <option value="search_engine">Search Engine</option>
+                            <option value="social_media">Social Media</option>
+                            <option value="friend">Friend/Word of Mouth</option>
+                            <option value="advertisement">Advertisement</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="newsletter" value="yes" checked> Subscribe to our newsletter
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Submit Form">
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p style="text-align: center; margin-top: 30px; padding: 15px; background-color: #333; color: white; border-radius: 8px;">
+            &copy; 2025 Enhanced Web Page Demo. All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
